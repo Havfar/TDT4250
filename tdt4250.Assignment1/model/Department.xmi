@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Department
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns="platform/plugin/tdt4250.Assignment1.model/model/studyProgram.ecore"
+    xsi:schemaLocation="platform/plugin/tdt4250.Assignment1.model/model/studyProgram.ecore studyProgram.ecore"
+    name="IDI">
+  <studyProgramme
+      name="Datateknologi 5"
+      description="Datatek"
+      credits="300.0"
+      numberOfYears="5">
+    <studyPlan
+        name="Generell">
+      <profile
+          name="Algoritmer"
+          semester="//@studyProgramme.0/@studyPlan.0/@semester.0">
+        <subProfile
+            name="Algoritmer"/>
+      </profile>
+      <semester
+          year="1">
+        <courses
+            code="EXPH00004"
+            name="Exphil"
+            credits="7.5"
+            mandetory="true"/>
+        <courses
+            code="HMS0002"
+            name="HMS"
+            mandetory="true"/>
+        <courses
+            code="TDT4110"
+            name="ITGK"
+            credits="7.5"
+            mandetory="true"/>
+        <courses
+            code="TMA4100"
+            name="Matte1"
+            credits="7.5"
+            mandetory="true"/>
+        <courses
+            code="TMA4140"
+            name="Diskmat"
+            credits="7.5"
+            mandetory="true"/>
+      </semester>
+      <semester
+          year="1"
+          season="Spring">
+        <courses
+            code="EXPH00004"
+            name="Exphil"
+            credits="7.5"
+            mandetory="true"/>
+      </semester>
+    </studyPlan>
+    <studyPlan
+        name="Database">
+      <profile
+          name="Database"/>
+    </studyPlan>
+    <studyPlan
+        name="Progsys">
+      <profile
+          name="Progsys"/>
+    </studyPlan>
+    <studyPlan
+        name="KI">
+      <profile
+          name="KI"/>
+    </studyPlan>
+  </studyProgramme>
+  <studyProgramme
+      name="Datateknologi 2"
+      description="Datatek"
+      credits="120.0"
+      numberOfYears="2"/>
+  <studyProgramme
+      name="Informatikk batchelor"
+      description="informatikk"
+      credits="180.0"
+      numberOfYears="3"/>
+  <studyProgramme
+      name="Informatikk Master"
+      description="informatikk"
+      credits="120.0"
+      numberOfYears="2"/>
+</Department>

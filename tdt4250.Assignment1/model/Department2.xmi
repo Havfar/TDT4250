@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StudyProgram:Department
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:StudyProgram="platform:/plugin/tdt4250.Assignment1/model/studyProgram1.ecore"
+    xsi:schemaLocation="platform:/plugin/tdt4250.Assignment1/model/studyProgram1.ecore studyProgram.ecore"
+    name="IDI">
+  <courses name="AvansertProgDes"
+      code="TDT4250"/>
+  <courses name="Exphil"
+      code="EXPH0004"/>
+  <courses name="Matematikk 1&#xA;"
+      code="TMA4100"/>
+  <courses name="ITGK"
+      code="TDT4100"/>
+  <courses name="Diskret matematikk"
+      code="TMA4140"/>
+  <courses name="HMS"
+      code="HMS0002"
+      credits="0.0"/>
+  <courses name="Objektorientert programmering&#xA;"
+      code="TDT4100"/>
+  <courses name="Programmeringslab for datateknologi&#xA;"
+      code="TDT4112"/>
+  <courses name="Krets- og digitalteknikk&#xA;"
+      code="TFE4101"/>
+  <courses name="Matematikk 3&#xA;"
+      code="TMA4115"/>
+  <courses name="Datateknologi, programmeringsprosjekt&#xA;"
+      code="TDT4113"/>
+  <courses name="Algoritmer og datastrukturer&#xA;"
+      code="TDT4120"/>
+  <courses name="Datamaskiner og digitalteknikk&#xA;"
+      code="TDT4160"/>
+  <courses name="Statistikk"
+      code="TMA4240"/>
+  <courses name="Programvareutvikling"
+      code="TDT4140"/>
+  <courses name="Datamodellering og databasesystemer&#xA;"
+      code="TDT4145"/>
+  <courses name="Menneske-maskin interaksjon&#xA;"
+      code="TDT4180"/>
+  <courses name="Kommunikasjon - Tjenester og nett&#xA;"
+      code="TTM4100"/>
+  <courses name="Kognitive arkitekturer&#xA;"
+      code="TDT4137"/>
+  <courses name="Introduksjon til kunstig intelligens&#xA;"
+      code="TDT4136"/>
+  <courses name="Maskinnær programmering&#xA;"
+      code="TDT4258"/>
+  <courses name="Matematikk 4D&#xA;"
+      code="TMA4135"/>
+  <courses name="Webutvikling"
+      code="IT2810"/>
+  <courses name="Informasjonsgjenfinning"
+      code="TDT4117"/>
+  <courses name="Programmeringsspråk"
+      code="TDT4165"/>
+  <courses name="Informasjonssystemer"
+      code="TDT4175"/>
+  <courses name="Fysikk"
+      code="TFY4125"/>
+  <courses name="Teknologiledelse"
+      code="TIØ4258"/>
+  <courses name="Programvarearkitektur"
+      code="TDT4240"/>
+  <courses name="Operativssystemer"
+      code="TDT4186"/>
+  <courses name="Metoder i kunstig intelligens&#xA;"
+      code="TDT4171"/>
+  <courses name="Datavarehus og datagruvedrift&#xA;"
+      code="TDT4300"/>
+  <courses name="Kompilatorteknikk"
+      code="TDT4205"/>
+  <courses name="L"
+      code="TST100"/>
+  <studyPrograms
+      name="Datateknologi"
+      numberOfYears="2">
+    <profiles
+        name="Progsys">
+      <subProfile
+          name="UI"/>
+      <subProfile
+          name="EA"/>
+      <subProfile
+          name="PU"/>
+      <semester
+          year="3">
+        <courses
+            course="//@courses.18"/>
+        <courses
+            course="//@courses.19"
+            isMandetory="true"/>
+        <courses
+            course="//@courses.21"
+            isMandetory="true"/>
+        <courses
+            course="//@courses.20"/>
+        <courses
+            course="//@courses.22"/>
+        <courses
+            course="//@courses.23"/>
+        <courses
+            course="//@courses.24"/>
+        <courses
+            course="//@courses.25"
+            isMandetory="true"/>
+      </semester>
+      <semester
+          year="3"
+          season="Spring">
+        <courses
+            course="//@courses.26"
+            isMandetory="true"/>
+        <courses
+            course="//@courses.27"
+            isMandetory="true"/>
+        <courses
+            course="//@courses.28"
+            isMandetory="true"/>
+        <courses
+            course="//@courses.10"
+            isMandetory="true"/>
+      </semester>
+    </profiles>
+    <profiles
+        name="Algoritmer">
+      <subProfile
+          name="Algoritmer"/>
+      <subProfile
+          name="Datamaskin"/>
+      <semester
+          year="3">
+        <courses
+            course="//@courses.18"/>
+        <courses
+            course="//@courses.19"
+            isMandetory="true"/>
+        <courses
+            course="//@courses.21"
+            isMandetory="true"/>
+        <courses
+            course="//@courses.20"
+            isMandetory="true"/>
+        <courses
+            course="//@courses.22"/>
+        <courses
+            course="//@courses.23"/>
+        <courses
+            course="//@courses.24"/>
+        <courses
+            course="//@courses.25"/>
+      </semester>
+      <semester
+          year="3"
+          season="Spring">
+        <courses
+            course="//@courses.26"
+            isMandetory="true"/>
+        <courses
+            course="//@courses.27"
+            isMandetory="true"/>
+        <courses
+            course="//@courses.32"
+            isMandetory="true"/>
+        <courses
+            course="//@courses.10"
+            isMandetory="true"/>
+      </semester>
+    </profiles>
+    <profiles
+        name="AI">
+      <semester
+          year="3">
+        <courses
+            course="//@courses.18"
+            isMandetory="true"/>
+        <courses
+            course="//@courses.19"
+            isMandetory="true"/>
+        <courses
+            course="//@courses.21"
+            isMandetory="true"/>
+        <courses
+            course="//@courses.20"/>
+        <courses
+            course="//@courses.22"/>
+        <courses
+            course="//@courses.23"/>
+        <courses
+            course="//@courses.24"/>
+        <courses
+            course="//@courses.25"/>
+      </semester>
+      <semester
+          year="3"
+          season="Spring">
+        <courses
+            course="//@courses.26"
+            isMandetory="true"/>
+        <courses
+            course="//@courses.27"
+            isMandetory="true"/>
+        <courses
+            course="//@courses.30"
+            isMandetory="true"/>
+        <courses
+            course="//@courses.10"
+            isMandetory="true"/>
+      </semester>
+    </profiles>
+    <profiles
+        name="Database">
+      <semester
+          year="3">
+        <courses
+            course="//@courses.18"/>
+        <courses
+            course="//@courses.19"
+            isMandetory="true"/>
+        <courses
+            course="//@courses.21"
+            isMandetory="true"/>
+        <courses
+            course="//@courses.20"/>
+        <courses
+            course="//@courses.22"/>
+        <courses
+            course="//@courses.23"
+            isMandetory="true"/>
+        <courses
+            course="//@courses.24"/>
+        <courses
+            course="//@courses.25"/>
+      </semester>
+      <semester
+          year="3"
+          season="Spring">
+        <courses
+            course="//@courses.26"
+            isMandetory="true"/>
+        <courses
+            course="//@courses.27"
+            isMandetory="true"/>
+        <courses
+            course="//@courses.31"
+            isMandetory="true"/>
+        <courses
+            course="//@courses.10"
+            isMandetory="true"/>
+      </semester>
+    </profiles>
+    <semesters
+        year="1">
+      <courses
+          course="//@courses.3"
+          isMandetory="true"/>
+      <courses
+          course="//@courses.2"
+          isMandetory="true"/>
+      <courses
+          course="//@courses.5"
+          isMandetory="true"/>
+      <courses
+          course="//@courses.1"
+          isMandetory="true"/>
+      <courses
+          course="//@courses.4"
+          isMandetory="true"/>
+    </semesters>
+    <semesters
+        year="1"
+        season="Spring">
+      <courses
+          course="//@courses.6"
+          isMandetory="true"/>
+      <courses
+          course="//@courses.7"
+          isMandetory="true"/>
+      <courses
+          course="//@courses.8"
+          isMandetory="true"/>
+      <courses
+          course="//@courses.9"
+          isMandetory="true"/>
+    </semesters>
+    <semesters
+        year="2">
+      <courses
+          course="//@courses.10"
+          isMandetory="true"/>
+      <courses
+          course="//@courses.12"
+          isMandetory="true"/>
+      <courses
+          course="//@courses.11"
+          isMandetory="true"/>
+      <courses
+          course="//@courses.13"
+          isMandetory="true"/>
+    </semesters>
+    <semesters
+        year="2"
+        season="Spring">
+      <courses
+          course="//@courses.14"
+          isMandetory="true"/>
+      <courses
+          course="//@courses.15"
+          isMandetory="true"/>
+      <courses
+          course="//@courses.16"
+          isMandetory="true"/>
+      <courses
+          course="//@courses.17"
+          isMandetory="true"/>
+    </semesters>
+  </studyPrograms>
+</StudyProgram:Department>
