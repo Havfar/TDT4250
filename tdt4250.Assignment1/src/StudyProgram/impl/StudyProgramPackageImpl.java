@@ -552,6 +552,12 @@ public class StudyProgramPackageImpl extends EPackageImpl implements StudyProgra
 	protected void createEcoreAnnotations() {
 		String source = "http://www.eclipse.org/emf/2002/Ecore";
 		addAnnotation
+		  (this,
+		   source,
+		   new String[] {
+			   "validationDelegates", "http://www.eclipse.org/acceleo/query/1.0"
+		   });
+		addAnnotation
 		  (studyprogramEClass,
 		   source,
 		   new String[] {

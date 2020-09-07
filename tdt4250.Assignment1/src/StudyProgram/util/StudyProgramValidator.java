@@ -137,32 +137,41 @@ public class StudyProgramValidator extends EObjectValidator {
 	}
 
 	/**
+	 * The cached validation expression for the isGreaterThan constraint of '<em>Studyprogram</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected static final String STUDYPROGRAM__IS_GREATER_THAN__EEXPRESSION = "self.numberOfYears >= 2";
+
+	/**
 	 * Validates the isGreaterThan constraint of '<em>Studyprogram</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public boolean validateStudyprogram_isGreaterThan(Studyprogram studyprogram, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		// TODO implement the constraint
-		// -> specify the condition that violates the constraint
-		// -> verify the diagnostic details, including severity, code, and message
-		// Ensure that you remove @generated or mark it @generated NOT
-		if (false) {
-			if (diagnostics != null) {
-				diagnostics.add
-					(createDiagnostic
-						(Diagnostic.ERROR,
-						 DIAGNOSTIC_SOURCE,
-						 0,
-						 "_UI_GenericConstraint_diagnostic",
-						 new Object[] { "isGreaterThan", getObjectLabel(studyprogram, context) },
-						 new Object[] { studyprogram },
-						 context));
-			}
-			return false;
-		}
-		return true;
+		return
+			validate
+				(StudyProgramPackage.Literals.STUDYPROGRAM,
+				 studyprogram,
+				 diagnostics,
+				 context,
+				 "http://www.eclipse.org/acceleo/query/1.0",
+				 "isGreaterThan",
+				 STUDYPROGRAM__IS_GREATER_THAN__EEXPRESSION,
+				 Diagnostic.ERROR,
+				 DIAGNOSTIC_SOURCE,
+				 0);
 	}
+
+	/**
+	 * The cached validation expression for the isLessThan constraint of '<em>Studyprogram</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected static final String STUDYPROGRAM__IS_LESS_THAN__EEXPRESSION = "self.numberOfYears <= 5";
 
 	/**
 	 * Validates the isLessThan constraint of '<em>Studyprogram</em>'.
@@ -171,25 +180,18 @@ public class StudyProgramValidator extends EObjectValidator {
 	 * @generated
 	 */
 	public boolean validateStudyprogram_isLessThan(Studyprogram studyprogram, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		// TODO implement the constraint
-		// -> specify the condition that violates the constraint
-		// -> verify the diagnostic details, including severity, code, and message
-		// Ensure that you remove @generated or mark it @generated NOT
-		if (false) {
-			if (diagnostics != null) {
-				diagnostics.add
-					(createDiagnostic
-						(Diagnostic.ERROR,
-						 DIAGNOSTIC_SOURCE,
-						 0,
-						 "_UI_GenericConstraint_diagnostic",
-						 new Object[] { "isLessThan", getObjectLabel(studyprogram, context) },
-						 new Object[] { studyprogram },
-						 context));
-			}
-			return false;
-		}
-		return true;
+		return
+			validate
+				(StudyProgramPackage.Literals.STUDYPROGRAM,
+				 studyprogram,
+				 diagnostics,
+				 context,
+				 "http://www.eclipse.org/acceleo/query/1.0",
+				 "isLessThan",
+				 STUDYPROGRAM__IS_LESS_THAN__EEXPRESSION,
+				 Diagnostic.ERROR,
+				 DIAGNOSTIC_SOURCE,
+				 0);
 	}
 
 	/**
@@ -212,31 +214,32 @@ public class StudyProgramValidator extends EObjectValidator {
 	}
 
 	/**
+	 * The cached validation expression for the canBeSubProfile constraint of '<em>Profile</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected static final String PROFILE__CAN_BE_SUB_PROFILE__EEXPRESSION = "self.eContainer().eContainer().eClass() <> self.eClass()";
+
+	/**
 	 * Validates the canBeSubProfile constraint of '<em>Profile</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public boolean validateProfile_canBeSubProfile(Profile profile, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		// TODO implement the constraint
-		// -> specify the condition that violates the constraint
-		// -> verify the diagnostic details, including severity, code, and message
-		// Ensure that you remove @generated or mark it @generated NOT
-		if (false) {
-			if (diagnostics != null) {
-				diagnostics.add
-					(createDiagnostic
-						(Diagnostic.ERROR,
-						 DIAGNOSTIC_SOURCE,
-						 0,
-						 "_UI_GenericConstraint_diagnostic",
-						 new Object[] { "canBeSubProfile", getObjectLabel(profile, context) },
-						 new Object[] { profile },
-						 context));
-			}
-			return false;
-		}
-		return true;
+		return
+			validate
+				(StudyProgramPackage.Literals.PROFILE,
+				 profile,
+				 diagnostics,
+				 context,
+				 "http://www.eclipse.org/acceleo/query/1.0",
+				 "canBeSubProfile",
+				 PROFILE__CAN_BE_SUB_PROFILE__EEXPRESSION,
+				 Diagnostic.ERROR,
+				 DIAGNOSTIC_SOURCE,
+				 0);
 	}
 
 	/**
@@ -254,9 +257,39 @@ public class StudyProgramValidator extends EObjectValidator {
 		if (result || diagnostics != null) result &= validate_UniqueID(semester, diagnostics, context);
 		if (result || diagnostics != null) result &= validate_EveryKeyUnique(semester, diagnostics, context);
 		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(semester, diagnostics, context);
+		if (result || diagnostics != null) result &= validateSemester_hasEnoughCredits(semester, diagnostics, context);
 		return result;
 	}
 
+
+	/**
+	 * The cached validation expression for the hasEnoughCredits constraint of '<em>Semester</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected static final String SEMESTER__HAS_ENOUGH_CREDITS__EEXPRESSION = "self.courses -> select(p | p.isMandetory = true).course.credits -> sum() <= 30.0";
+
+	/**
+	 * Validates the hasEnoughCredits constraint of '<em>Semester</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateSemester_hasEnoughCredits(Semester semester, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return
+			validate
+				(StudyProgramPackage.Literals.SEMESTER,
+				 semester,
+				 diagnostics,
+				 context,
+				 "http://www.eclipse.org/acceleo/query/1.0",
+				 "hasEnoughCredits",
+				 SEMESTER__HAS_ENOUGH_CREDITS__EEXPRESSION,
+				 Diagnostic.ERROR,
+				 DIAGNOSTIC_SOURCE,
+				 0);
+	}
 
 	/**
 	 * <!-- begin-user-doc -->
