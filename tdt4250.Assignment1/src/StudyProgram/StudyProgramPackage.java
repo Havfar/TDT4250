@@ -334,13 +334,22 @@ public interface StudyProgramPackage extends EPackage {
 	int COURSE__CREDITS = 3;
 
 	/**
+	 * The feature id for the '<em><b>Department Code</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COURSE__DEPARTMENT_CODE = 4;
+
+	/**
 	 * The number of structural features of the '<em>Course</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int COURSE_FEATURE_COUNT = 4;
+	int COURSE_FEATURE_COUNT = 5;
 
 	/**
 	 * The number of operations of the '<em>Course</em>' class.
@@ -656,6 +665,17 @@ public interface StudyProgramPackage extends EPackage {
 	EAttribute getCourse_Credits();
 
 	/**
+	 * Returns the meta object for the attribute '{@link StudyProgram.Course#getDepartmentCode <em>Department Code</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Department Code</em>'.
+	 * @see StudyProgram.Course#getDepartmentCode()
+	 * @see #getCourse()
+	 * @generated
+	 */
+	EAttribute getCourse_DepartmentCode();
+
+	/**
 	 * Returns the meta object for class '{@link StudyProgram.CourseElement <em>Course Element</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -915,6 +935,14 @@ public interface StudyProgramPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute COURSE__CREDITS = eINSTANCE.getCourse_Credits();
+
+		/**
+		 * The meta object literal for the '<em><b>Department Code</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute COURSE__DEPARTMENT_CODE = eINSTANCE.getCourse_DepartmentCode();
 
 		/**
 		 * The meta object literal for the '{@link StudyProgram.impl.CourseElementImpl <em>Course Element</em>}' class.

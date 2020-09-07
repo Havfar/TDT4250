@@ -40,6 +40,7 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute studyProgram.ecore#//Course/code"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute studyProgram.ecore#//Course/level"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute studyProgram.ecore#//Course/credits"/>
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute studyProgram.ecore#//Course/departmentCode"/>
     </genClasses>
     <genClasses ecoreClass="studyProgram.ecore#//CourseElement">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference studyProgram.ecore#//CourseElement/course"/>

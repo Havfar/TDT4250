@@ -25,6 +25,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *   <li>{@link StudyProgram.impl.CourseImpl#getCode <em>Code</em>}</li>
  *   <li>{@link StudyProgram.impl.CourseImpl#getLevel <em>Level</em>}</li>
  *   <li>{@link StudyProgram.impl.CourseImpl#getCredits <em>Credits</em>}</li>
+ *   <li>{@link StudyProgram.impl.CourseImpl#getDepartmentCode <em>Department Code</em>}</li>
  * </ul>
  *
  * @generated
@@ -109,6 +110,16 @@ public class CourseImpl extends MinimalEObjectImpl.Container implements Course {
 	 * @ordered
 	 */
 	protected float credits = CREDITS_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getDepartmentCode() <em>Department Code</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDepartmentCode()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String DEPARTMENT_CODE_EDEFAULT = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -216,6 +227,27 @@ public class CourseImpl extends MinimalEObjectImpl.Container implements Course {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @generated NOT
+	 */
+	public String getDepartmentCode() {
+		String courseCode = this.getCode();
+		if(courseCode == null) {
+			return null;
+		}
+		
+		String departmentCode;
+		if(courseCode.length() == 6) {
+			departmentCode = courseCode.substring(0,2);
+		}else {
+			departmentCode = courseCode.substring(0,3);
+		}
+		
+		return departmentCode;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
@@ -229,6 +261,8 @@ public class CourseImpl extends MinimalEObjectImpl.Container implements Course {
 				return getLevel();
 			case StudyProgramPackage.COURSE__CREDITS:
 				return getCredits();
+			case StudyProgramPackage.COURSE__DEPARTMENT_CODE:
+				return getDepartmentCode();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -297,6 +331,8 @@ public class CourseImpl extends MinimalEObjectImpl.Container implements Course {
 				return level != LEVEL_EDEFAULT;
 			case StudyProgramPackage.COURSE__CREDITS:
 				return credits != CREDITS_EDEFAULT;
+			case StudyProgramPackage.COURSE__DEPARTMENT_CODE:
+				return DEPARTMENT_CODE_EDEFAULT == null ? getDepartmentCode() != null : !DEPARTMENT_CODE_EDEFAULT.equals(getDepartmentCode());
 		}
 		return super.eIsSet(featureID);
 	}

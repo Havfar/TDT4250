@@ -359,6 +359,15 @@ public class StudyProgramPackageImpl extends EPackageImpl implements StudyProgra
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getCourse_DepartmentCode() {
+		return (EAttribute)courseEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getCourseElement() {
 		return courseElementEClass;
 	}
@@ -453,6 +462,7 @@ public class StudyProgramPackageImpl extends EPackageImpl implements StudyProgra
 		createEAttribute(courseEClass, COURSE__CODE);
 		createEAttribute(courseEClass, COURSE__LEVEL);
 		createEAttribute(courseEClass, COURSE__CREDITS);
+		createEAttribute(courseEClass, COURSE__DEPARTMENT_CODE);
 
 		courseElementEClass = createEClass(COURSE_ELEMENT);
 		createEReference(courseElementEClass, COURSE_ELEMENT__COURSE);
@@ -519,6 +529,7 @@ public class StudyProgramPackageImpl extends EPackageImpl implements StudyProgra
 		initEAttribute(getCourse_Code(), ecorePackage.getEString(), "code", null, 0, 1, Course.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getCourse_Level(), this.getLevel(), "level", null, 1, 1, Course.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getCourse_Credits(), ecorePackage.getEFloat(), "credits", "7.5", 1, 1, Course.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getCourse_DepartmentCode(), ecorePackage.getEString(), "departmentCode", null, 0, 1, Course.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 
 		initEClass(courseElementEClass, CourseElement.class, "CourseElement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getCourseElement_Course(), this.getCourse(), null, "course", null, 1, 1, CourseElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
