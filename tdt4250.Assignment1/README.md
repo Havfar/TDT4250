@@ -33,7 +33,7 @@
 
 #### Validate the format of a course code
 A course can either be on format AA1234 or AAA1234. This checks if the formats is correct.
-```
+```java
 public boolean validateCourse_correctCourseCode(Course course, DiagnosticChain diagnostics, Map<Object, Object> context) {
 	String code = course.getCode();
 	
@@ -61,7 +61,7 @@ public boolean validateCourse_correctCourseCode(Course course, DiagnosticChain d
 
 #### Validate correct credit
 A course has to be a postiv number less than or equal to 60 credits. 
-```
+```java
 public boolean validateCourse_correctCredits(Course course, DiagnosticChain diagnostics, Map<Object, Object> context) {
 	return course.getCredits() >= 0.0f && course.getCredits() <= 60.0f;
 }
