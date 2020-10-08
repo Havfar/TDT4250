@@ -1,0 +1,106 @@
+[comment encoding = UTF-8 /]
+[**
+ * The documentation of the module Generator.
+ */]
+[module DepartmentGenerator('platform:/plugin/tdt4250.Assignment1/model/studyProgram1.ecore', 'http://www.eclipse.org/emf/2002/Ecore')/]
+
+[**
+ * The documentation of the template SiteGenerator.
+ * @param anAssociationClassElement
+ */]
+[template public DepartmentGenerator(department : Department)]
+[comment @main/]
+[file ('Studyprogram.html', false, 'UTF-8')]
+<html>
+	<head>
+		<title>Assignment 2</title>
+		<meta charset="utf-8"/>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+		<style>
+			body {
+				font-family: Helvetica, Arial, sans-serif;
+			}
+		</style>
+	</head>
+	<body>
+	<div class="container">
+		<div class="row">
+			<div class="col-2"></div>
+			<div class="col-8">
+				<h1>TDT4250 - Assignment 2</h1>
+				<hr/>
+				<h2 class="mb-5">Departmentos: [department.name/]</h2>
+				[for (semester : Semester | department.studyPrograms.semesters)]
+					[displaySemester(semester)/]
+				[/for]
+				<hr/>
+
+				[for (profile : Profile | department.studyPrograms.profiles)]
+					[displayProfile(profile)/]
+					[for (subProfile : Profile | profile.subProfile)]
+						[displayProfile(subProfile)/]		
+					[/for]		
+					<hr/>	
+				[/for]
+				<hr/>				
+			<div/>
+	</body>
+</html>
+[/file]
+[/template]
+
+[**
+ * Displays the courses in the semester into a table
+ * @param semester
+ */]
+[template public displaySemester(semester : Semester)]
+	<h5 class="mt-3 mb-2"> [semester.year/]. år - [translateSeasonToNorwegian(semester.season.toString())/]</h5>
+	<table class="table table-striped">
+		<thead class="thead-light">
+			<tr>
+				<th class="text-left">Kode</th>
+				<th class="text-left" style="width: 50%">Navn</th>
+				<th>SP</th>
+				<th>Status</th>
+			</tr>
+		</thead>
+		<tbody>
+		[for (ce : CourseElement | semester.courses)]
+			<tr>
+				<td>[ce.course.code/]</td>
+				<td>[ce.course.name/]</td>
+				<td class="text-center">[ce.course.credits/]</td>
+				<td class="text-center">[isMandetoryToString(ce.isMandetory)/]</td>
+			</tr>
+		[/for]
+		</tbody>
+	</table>
+[/template]
+
+[**
+ * Displays the studyProfile
+ * @param profile
+ */]
+[template public displayProfile(profile : Profile)]
+	<h4>[profile.name/]  </h4>
+	[for(semester:Semester | profile.semester)]
+		[displaySemester(semester)/]
+	[/for]
+[/template]
+
+[**
+ * Displays mandetory as O or VA.
+ * @param bool
+ */]
+[template public isMandetoryToString(bool : Boolean)]	
+	[if(bool)]
+		O
+	[else]
+		VA
+	[/if]
+[/template]
+
+
+[query public translateSeasonToNorwegian(s : String) : String =
+	invoke('tdt4250.Assignment2.common.DepartmentGeneratorHelper', 'translateSeasonToNorwegian(java.lang.String)', Sequence{s})
+/]
