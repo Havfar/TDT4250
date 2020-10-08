@@ -12,5 +12,11 @@ Export-Package: StudyProgram,
  StudyProgram.impl,
  StudyProgram.util
 Require-Bundle: org.eclipse.core.runtime,
- org.eclipse.emf.ecore;visibility:=reexport
+ org.eclipse.emf.ecore;visibility:=reexport,
+ org.junit,
+ org.junit.jupiter.api,
+ org.eclipse.acceleo.query,
+ org.eclipse.emf.common
 Bundle-ActivationPolicy: lazy
+Import-Package: org.eclipse.emf.codegen.ecore.templates.model.tests,
+ org.eclipse.emf.ecore.xmi.impl

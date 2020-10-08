@@ -6,7 +6,7 @@
     xmlns:StudyProgram="platform:/plugin/tdt4250.Assignment1/model/studyProgram1.ecore"
     xsi:schemaLocation="platform:/plugin/tdt4250.Assignment1/model/studyProgram1.ecore studyProgram.ecore"
     name="IDI">
-  <courses name="AvansertProgDes"
+  <courses name="Avansert programvaredesign"
       code="TDT4250"/>
   <courses name="Exphil"
       code="EXPH0004"/>
@@ -73,19 +73,69 @@
       code="TDT4300"/>
   <courses name="Kompilatorteknikk"
       code="TDT4205"/>
-  <courses name="L"
-      code="TST100"/>
+  <courses name="Virksomhets-arkitektur og -innovasjon"
+      code="TDT4252"
+      level="Grad"/>
+  <courses name="Kundestryt orosjekt"
+      code="TDT4290"
+      level="Grad"
+      credits="15.0"/>
+  <courses name="Experter i Team"
+      code="EIT3000"
+      level="Grad"/>
+  <courses name="Design av grafiske brukergrensesnitt&#xA;"
+      code="IT3402"
+      level="Grad"/>
   <studyPrograms
       name="Datateknologi"
       numberOfYears="2">
     <profiles
         name="Progsys">
       <subProfile
-          name="UI"/>
+          name="UI">
+        <semester
+            year="4">
+          <courses
+              course="//@courses.18"
+              isMandetory="true"/>
+          <courses
+              course="//@courses.35"
+              isMandetory="true"/>
+          <courses
+              course="//@courses.36"
+              isMandetory="true"/>
+        </semester>
+      </subProfile>
       <subProfile
-          name="EA"/>
+          name="Vikrsomhetsutvikling">
+        <semester
+            year="4">
+          <courses
+              course="//@courses.18"
+              isMandetory="true"/>
+          <courses
+              course="//@courses.35"
+              isMandetory="true"/>
+          <courses
+              course="//@courses.33"
+              isMandetory="true"/>
+        </semester>
+      </subProfile>
       <subProfile
-          name="PU"/>
+          name="Programvareutvikling">
+        <semester
+            year="4">
+          <courses
+              course="//@courses.18"
+              isMandetory="true"/>
+          <courses
+              course="//@courses.35"
+              isMandetory="true"/>
+          <courses
+              course="//@courses.0"
+              isMandetory="true"/>
+        </semester>
+      </subProfile>
       <semester
           year="3">
         <courses
@@ -127,10 +177,6 @@
     </profiles>
     <profiles
         name="Algoritmer">
-      <subProfile
-          name="Algoritmer"/>
-      <subProfile
-          name="Datamaskin"/>
       <semester
           year="3">
         <courses
